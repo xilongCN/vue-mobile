@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <div class="name">
+
+    </div>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -17,6 +20,9 @@
   color: #2c3e50;
 }
 #nav {
+  .name{
+
+  }
   padding: 30px;
   a {
     font-weight: bold;
