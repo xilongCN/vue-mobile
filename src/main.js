@@ -4,6 +4,7 @@ import router from './router/router'
 import store from './vuex/store'
 import FastClick from 'fastclick'
 import '@/common/js/lib-flexble'
+import '@/common/css/index.scss'
 
 Vue.config.productionTip = false
 FastClick.attach(document.body)

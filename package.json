@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "better-scroll": "^1.13.2",
     "fastclick": "^1.0.6",
     "install": "^0.12.1",
     "npm": "^6.4.1",
