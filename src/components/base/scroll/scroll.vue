@@ -6,6 +6,7 @@
 
 <script>
 import BScroll from 'better-scroll'
+
 export default {
   name: 'scroll',
   props: {
@@ -32,17 +33,23 @@ export default {
         }
       })
       this.scroll.on('touchend', (pos) => {
-        console.log('上拉')
         if (pos.y > 50) {
           console.log('上拉')
+        } else if (pos.y < (this.scroll.maxScrollY - 30)) {
+          console.log('滚动到底部')
         }
       })
-      this.scroll.on('scrollEnd', () => {
+      this.scroll.on('scrollEnd', (pos) => {
         // 滚动到底部
-        if (this.scroll.y <= (this.scroll.maxScrollY + 50)) {
-          // this.$emit('scrollToEnd')
-          console.log(133)
+        if (pos.y > 30) {
+          console.log('上拉')
+        } else if (pos.y < (this.scroll.maxScrollY - 30)) {
+          console.log('滚动到底部')
         }
+        // if (this.scroll.y <= (this.scroll.maxScrollY + 50)) {
+        //     // this.$emit('scrollToEnd')
+        //     console.log(133)
+        // }
       })
       console.log(this.scroll)
     },
