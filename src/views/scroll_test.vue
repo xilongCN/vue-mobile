@@ -20,44 +20,44 @@
 import Scroll from 'vue-slim-better-scroll'
 import { scrollMixin } from '@/mixins/scroll/scroll-mixin.js'
 export default {
-  name: 'scroll_test',
-  components: {
-    Scroll
-  },
-  data () {
-    return {
+    name: 'scroll_test',
+    components: {
+        Scroll
+    },
+    data () {
+        return {
 
-    }
-  },
-  mixins: [
-    scrollMixin
-  ],
-  created () {
-    this.loadRefresh()
-  },
-  mounted () {},
-  methods: {
+        }
+    },
+    mixins: [
+        scrollMixin
+    ],
+    created () {
+        this.loadRefresh()
+    },
+    mounted () {},
+    methods: {
     // 滚动到顶部
-    scrollToTop () {
-      this.$refs.scroll.scrollToTop()
-    },
-    // 滚动到底部
-    scrollToBottom () {
-      this.$refs.scroll.scrollToBottom()
-    },
-    // 模拟一个异步获取列表操作
-    getData (page = 1, pageSize = this.pageSize) {
-      return new Promise(function (resolve) {
-        setTimeout(() => {
-          let listArray = []
-          for (let i = (page - 1) * pageSize; i < page * pageSize; i++) {
-            listArray.push(i)
-          }
-          resolve(listArray)
-        }, 2000)
-      })
+        scrollToTop () {
+            this.$refs.scroll.scrollToTop()
+        },
+        // 滚动到底部
+        scrollToBottom () {
+            this.$refs.scroll.scrollToBottom()
+        },
+        // 模拟一个异步获取列表操作
+        getData (page = 1, pageSize = this.pageSize) {
+            return new Promise(function (resolve) {
+                setTimeout(() => {
+                    let listArray = []
+                    for (let i = (page - 1) * pageSize; i < page * pageSize; i++) {
+                        listArray.push(i)
+                    }
+                    resolve(listArray)
+                }, 2000)
+            })
+        }
     }
-  }
 }
 </script>
 <style>

@@ -4,16 +4,16 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: () => import('@/views/Home')
-    },
-    {
-      path: '/scrollTest',
-      name: 'scrollTest',
-      component: () => import('../views/scroll_test.vue')
-    }
-  ]
+    routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: () => import('@/views/Home')
+        },
+        {
+            path: '/scrollTest',
+            name: 'scrollTest',
+            component: () => import('@/views/scroll_test.vue')
+        }
+    ]
 })
