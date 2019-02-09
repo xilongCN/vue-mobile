@@ -1,20 +1,28 @@
 <template>
     <div class="home">
-        <img alt="Vue logo" src="../assets/logo.png">
-        <div class="test">
-            我们阿里了
-        </div>
-        <a href="#">点击哈哈</a>
-        <input type="text">
+
     </div>
 </template>
 
 <script>
 // @ is an alias to /src
+
 export default {
     name: 'home',
-    components: {
-
+    components: {},
+    created () {
+        this.getData()
+    },
+    methods: {
+        getData () {
+            axios.get('/user?ID=12345')
+                .then(function (response) {
+                    console.log(response)
+                })
+                .catch(function (error) {
+                    console.log(error)
+                })
+        }
     }
 }
 </script>

@@ -11,6 +11,11 @@ export default new Router({
             component: () => import('@/views/Home')
         },
         {
+            path: '/test',
+            name: 'test',
+            component: () => import('@/views/test')
+        },
+        {
             path: '/scrollTest',
             name: 'scrollTest',
             component: () => import('@/views/scroll_test.vue')
