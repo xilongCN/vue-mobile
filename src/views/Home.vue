@@ -6,7 +6,7 @@
 
 <script>
 // @ is an alias to /src
-
+import axios from 'axios'
 export default {
     name: 'home',
     components: {},
@@ -15,7 +15,7 @@ export default {
     },
     methods: {
         getData () {
-            axios.get('/user?ID=12345')
+            axios.get(' https://easy-mock.com/mock/5c666d110e565f2def10b686/api/login')
                 .then(function (response) {
                     console.log(response)
                 })
